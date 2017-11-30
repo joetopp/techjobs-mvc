@@ -33,7 +33,7 @@ public class SearchController {
         }
 
         model.addAttribute("columns", ListController.columnChoices);
-        model.addAttribute("job", jobs);
+        model.addAttribute("jobs", jobs);
         return "search";
     }
 
