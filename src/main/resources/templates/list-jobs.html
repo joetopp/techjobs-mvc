@@ -10,7 +10,7 @@
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
-    <h1 th:text="'Found ' + ${jobs.size()} + ' Job(s)'"></h1>
+    <h1 th:if="${jobs}" th:text="'Found ' + ${jobs.size()} + ' Job(s)'"></h1>
     <table class="job-listing" th:each="job : ${jobs}">
         <tr th:each="jobItem : ${job}">
             <td th:text="${#strings.capitalizeWords(jobItem.getKey())}"></td>
